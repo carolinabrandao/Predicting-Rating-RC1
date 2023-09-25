@@ -101,7 +101,9 @@ for epoch in range(num_epochs):
 
 
     mse = np.mean(error ** 2)
-    print(f'Epoch {epoch + 1}/{num_epochs} | MSE: {mse:.5f}')
+
+    #used for testing and improving the results
+    #print(f'Epoch {epoch + 1}/{num_epochs} | MSE: {mse:.5f}')
 
 
 
