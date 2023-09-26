@@ -36,8 +36,8 @@ ratings = (df['Rating'].values)
 learning_rate = 0.0095 #Learning rate
 num_epochs = 19        #Number of epochs
 num_factors = 15       #Number of latent factors
-lambda_l2 = 0.095       #Regularization parameter for L2
-lambda_l1 = 0.01     #Regularization parameter for L1
+lambda_l2 = 0.095      #Regularization parameter for L2
+lambda_l1 = 0.01       #Regularization parameter for L1
 
 
 #number of unique users and items
@@ -82,6 +82,7 @@ for epoch in range(num_epochs):
         #get the user and item matrices for the batch
         user_batch_matrix = user_matrix[user_batch, :]
         item_batch_matrix = item_matrix[item_batch, :]
+        
         #get the dot product of the user and item matrices, to get the predicted ratings
         product = np.sum(user_batch_matrix * item_batch_matrix, axis=1)
 
